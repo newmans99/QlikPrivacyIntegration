@@ -1,0 +1,25 @@
+{
+    "Functions" : [
+        {
+            "Id" : 0,
+            "Name" : "decrypt",
+            "Type" : 2,
+            "ReturnType": 0,
+            "Params" : {
+                    "string" : 0,
+                    "field_ref" : 0,
+                    "user_ref" : 0,
+                    "comment" : 0
+                }
+        },
+        {
+            "Id" : 1,
+            "Name" : "encrypt",
+            "Type" : 2,
+            "ReturnType": 0,
+            "Params" : {
+                    "string" : 0
+                }
+        }
+    ]
+}
