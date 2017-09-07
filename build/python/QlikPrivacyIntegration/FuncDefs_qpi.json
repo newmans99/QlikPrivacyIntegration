@@ -20,6 +20,18 @@
             "Params" : {
                     "string" : 0
                 }
+        },
+        {
+            "Id" : 2,
+            "Name" : "getField",
+            "Type" : 2,
+            "ReturnType": 0,
+            "Params" : {
+                    "field" : 0,
+                    "id" : 0,
+                    "user_ref" : 0,
+                    "comment" : 0
+                }
         }
     ]
 }

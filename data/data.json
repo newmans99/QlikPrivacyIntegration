@@ -1,0 +1,26 @@
+{
+  "access" : [
+    "UserDirectory=QMI-QS-AAI; UserId=qlik",
+    "UserDirectory=QMI-QS-AAI; UserId=snm"
+  ],
+	"data" : {
+    "12345780": {
+  		"name": "Steve Newman",
+  		"phone": "123-456-7890"
+  	},
+  	"27850483": {
+  		"name": "Dan Murphy",
+  		"phone": "234-567-8901"
+  	}
+  },
+	"obfuscated" : {
+    "12345780": {
+  		"name": "Not Steve Newman",
+  		"phone": "999-999-9999"
+  	},
+  	"27850483": {
+  		"name": "Not Dan Murphy",
+  		"phone": "111-111-1111"
+  	}
+  }
+}

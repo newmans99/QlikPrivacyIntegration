@@ -2,7 +2,7 @@ import logging
 import logging.config
 
 import grpc
-from SSEData_qpi import ArgType, \
+from SSEData import ArgType, \
                                ReturnType, \
                                FunctionType
 

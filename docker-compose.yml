@@ -1,0 +1,21 @@
+version: "3"
+services:
+  qpi:
+    image: newmans99/qpi
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "50054:50054"
+    networks:
+      - webnet
+    volumes: 
+      - ./logs:/logs
+      - ./configs:/configs          
+networks:
+  webnet:
