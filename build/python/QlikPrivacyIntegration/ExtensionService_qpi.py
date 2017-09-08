@@ -171,7 +171,9 @@ class ExtensionService(SSE.ConnectorServicer):
         return {
             0: '_decrypt',
             1: '_encrypt',
-            2: '_getField'
+            2: '_getField',
+            3: '_cache',
+            4: '_no_cache'
         }
 
     @staticmethod
@@ -315,6 +317,59 @@ class ExtensionService(SSE.ConnectorServicer):
 
 
         yield SSE.BundledRows(rows=response_rows)
+
+    @staticmethod
+    def _cache(request, context):
+        """
+        Cache enabled. Add the datetime stamp to the end of each string value.
+        :param request: iterable sequence of bundled rows
+        :param context: not used.
+        :return: string
+        """
+        # Iterate over bundled rows
+        for request_rows in request:
+            # Iterate over rows
+            for row in request_rows.rows:
+                # Retrieve string value of parameter and append to the params variable
+                # Length of param is 1 since one column is received, the [0] collects the first value in the list
+                param = [d.strData for d in row.duals][0]
+
+                # Join with current timedate stamp
+                result = param + ' ' + datetime.now().isoformat()
+                # Create an iterable of dual with the result
+                duals = iter([SSE.Dual(strData=result)])
+
+                # Yield the row data as bundled rows
+                yield SSE.BundledRows(rows=[SSE.Row(duals=duals)])
+
+    @staticmethod
+    def _no_cache(request, context):
+        """
+        Cache disabled. Add the datetime stamp to the end of each string value.
+        :param request:
+        :param context: used for disabling the cache in the header.
+        :return: string
+        """
+        # Disable caching.
+        md = (('qlik-cache', 'no-store'),)
+        context.send_initial_metadata(md)
+
+        # Iterate over bundled rows
+        for request_rows in request:
+            # Iterate over rows
+            for row in request_rows.rows:
+                # Retrieve string value of parameter and append to the params variable
+                # Length of param is 1 since one column is received, the [0] collects the first value in the list
+                param = [d.strData for d in row.duals][0]
+
+                # Join with current timedate stamp
+                result = param + ' ' + datetime.now().isoformat()
+                # Create an iterable of dual with the result
+                duals = iter([SSE.Dual(strData=result)])
+
+                # Yield the row data as bundled rows
+                yield SSE.BundledRows(rows=[SSE.Row(duals=duals)])
+
 
     """
     Implementation of rpc functions.

@@ -32,6 +32,24 @@
                     "user_ref" : 0,
                     "comment" : 0
                 }
+        },
+        {
+            "Id" : 3,
+            "Name" : "Cache",
+            "Type" : 2,
+            "ReturnType": 0,
+            "Params" : {
+                    "str1" : 0
+            }
+        },
+        {
+            "Id" : 4,
+            "Name" : "NoCache",
+            "Type" : 2,
+            "ReturnType": 0,
+            "Params" : {
+                    "str1" : 0
+            }
         }
     ]
 }
