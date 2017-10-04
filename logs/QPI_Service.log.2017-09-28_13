@@ -1,0 +1,26 @@
+2017-09-28 13:36:34,446 - INFO - ExtensionService_qpi : 148 - Logging enabled
+2017-09-28 13:36:34,451 - INFO - ExtensionService_qpi : 153 - Audit log path: /logs
+2017-09-28 13:36:34,452 - INFO - ExtensionService_qpi : 154 - Config path: /configs/qpi.config
+2017-09-28 13:36:34,452 - INFO - ExtensionService_qpi : 85 - Updating data files.
+2017-09-28 13:36:34,457 - INFO - ExtensionService_qpi : 103 - Update complete.
+2017-09-28 13:36:34,465 - INFO - ExtensionService_qpi : 486 - *** Running server in insecure mode on port: 50054 ***
+2017-09-28 13:36:58,415 - INFO - ExtensionService_qpi : 388 - GetCapabilities
+2017-09-28 13:36:58,418 - INFO - ExtensionService_qpi : 411 - Adding to capabilities: decrypt(['comment', 'field_ref', 'string', 'user_ref'])
+2017-09-28 13:36:58,419 - INFO - ExtensionService_qpi : 411 - Adding to capabilities: encrypt(['string'])
+2017-09-28 13:36:58,420 - INFO - ExtensionService_qpi : 411 - Adding to capabilities: getField(['comment', 'field', 'id', 'user_ref'])
+2017-09-28 13:36:58,421 - INFO - ExtensionService_qpi : 411 - Adding to capabilities: Cache(['str1'])
+2017-09-28 13:36:58,422 - INFO - ExtensionService_qpi : 411 - Adding to capabilities: NoCache(['str1'])
+2017-09-28 13:39:24,876 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 0)
+2017-09-28 13:39:24,964 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 0)
+2017-09-28 13:39:49,237 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 0)
+2017-09-28 13:39:49,255 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 0)
+2017-09-28 13:40:32,966 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 2)
+2017-09-28 13:40:32,980 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 2)
+2017-09-28 13:40:32,988 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 2)
+2017-09-28 13:40:32,993 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 2)
+2017-09-28 13:40:33,001 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 2)
+2017-09-28 13:40:33,043 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 2)
+2017-09-28 13:40:33,101 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 2)
+2017-09-28 13:40:33,129 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 2)
+2017-09-28 13:43:24,681 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 0)
+2017-09-28 13:43:25,187 - INFO - ExtensionService_qpi : 426 - ExecuteFunction (functionId: 0)
