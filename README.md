@@ -8,7 +8,11 @@ Please see the "/QlikSense/QPI Overview.ppt" file for an overview.
 ## Setting up the example
 #### Prerequisites:
 1. Qlik Sense June/2017 (or later) - Requires AAI (Advanced Analytics Integration).
-2. Working Docker Environment, should be able to run:<br>```docker run hello-world```<br>Example environments include:
+2. Working Docker Environment, should be able to run:<br>
+  ```
+  docker run hello-world
+  ```
+  <br>Example environments include:
   * Mac w/Docker
   * Windows with Docker Toolkit (typically, this is the best option because of Hyper-V conflicts with VirtualPC and/or VMWare)
   * Windows with either VirtualPC or VMWare image running Windows Docker
@@ -18,11 +22,20 @@ Please see the "/QlikSense/QPI Overview.ppt" file for an overview.
 #### Setup Docker Container
 In your environment that supports Docker, using Terminal (Mac) or PowerSheel (Windows)...
 1. Navigate to folder that you downloaded "this github project"<br>
-  ```cd {github_project_download_path}/```<br><br><b>NOTE: </b>The current directory should contain a file named: "docker-compose.yml"
+  ```
+  cd {github_project_download_path}/
+  ```
+  <br><br><b>NOTE: </b>The current directory should contain a file named: "docker-compose.yml"
 2. Run the following command:<br>
-  ```docker stack deploy -c docker-compose.yml qpi```<br><br><b>NOTE: </b>This may take awhile during the download.
+  ```
+  docker stack deploy -c docker-compose.yml qpi
+  ```
+  <br><br><b>NOTE: </b>This may take awhile during the download.
 3. Run the following command:<br>
-  ```docker run -it --rm -p 50054:50054 -v {github_project_download_path}/logs:/logs -v {github_project_download_path}/configs:/configs -v {github_project_download_path}/data:/data --name qpi qpi:QlikPrivacyIntegration```<br><br><b>WHERE:<br>{github_project_download_path} =</b> Fully qualified path to github project contents. This should start with /, //, or c:\ depending on your environment. This can not be a relative path, such as: "./" or "../"
+  ```
+  docker run -it --rm -p 50054:50054 -v {github_project_download_path}/logs:/logs -v {github_project_download_path}/configs:/configs -v {github_project_download_path}/data:/data --name qpi qpi:QlikPrivacyIntegration
+  ```
+  <br><br><b>WHERE:<br>{github_project_download_path} =</b> Fully qualified path to github project contents. This should start with /, //, or c:\ depending on your environment. This can not be a relative path, such as: "./" or "../"
 
 #### Setup Qlik Sense
 <b>In Qlik Sense QMC...</b>
