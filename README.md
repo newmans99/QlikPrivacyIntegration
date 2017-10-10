@@ -25,15 +25,17 @@ In your environment that supports Docker, using Terminal (Mac) or PowerSheel (Wi
   ```
   cd {github_project_download_path}/
   ```
-  <br><br><b>NOTE: </b>The current directory should contain a file named: "docker-compose.yml"
-2. Run the following command:<br>
+  <br><br><b>NOTE: </b>The current directory should contain a file named: "docker-compose.yml"<br>&nbsp;
+2. Run the following commands:<br>
   ```
+  docker swarm init
   docker stack deploy -c docker-compose.yml qpi
   ```
-  <br><br><b>NOTE: </b>This may take awhile during the download.
+    <br><br><b>NOTE 1: </b>You may need to use "docker swarm init --advertise-addr {ip_address of qpi hostmachine}" if using Windows7/docker-toolbox.
+    <br><b>NOTE 2: </b>This may take awhile during the download.<br>&nbsp;
 3. Run the following command:<br>
   ```
-  docker run -it --rm -p 50054:50054 -v {github_project_download_path}/logs:/logs -v {github_project_download_path}/configs:/configs -v {github_project_download_path}/data:/data --name qpi qpi:QlikPrivacyIntegration
+  docker run -it --rm -p 50054:50054 -v {github_project_download_path}/logs:/logs -v {github_project_download_path}/configs:/configs -v {github_project_download_path}/data:/data --name qpi newmans99/qpi:latest
   ```
   <br><br><b>WHERE:<br>{github_project_download_path} =</b> Fully qualified path to github project contents. This should start with /, //, or c:\ depending on your environment. This can not be a relative path, such as: "./" or "../"
 
@@ -75,3 +77,6 @@ In your environment that supports Docker, using Terminal (Mac) or PowerSheel (Wi
 8. Reload Log data: Navigation > Data Load Editor (new window)
 9. Reload button
 10. Explore sheets
+
+## Troubleshooting
+* It has been reported that running Docker Toolkit inside of a VirtualPC/VMWare Image doesn't work. The work around is to use Docker Toolkit on your host operating system instead.
